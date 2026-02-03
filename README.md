@@ -7,7 +7,7 @@ It is designed as a reusable template for product, SaaS, or personal brand landi
 
 - **Astro**
 - **TypeScript**
-- **CSS / Tailwind / framework que uses**
+- **CSS / Tailwind
 - **Responsive design** (mobile-first)
 
 ## 📦 Getting started

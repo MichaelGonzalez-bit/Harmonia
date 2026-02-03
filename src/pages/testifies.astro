@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
+import { ServiceCards } from "@modules/Carrusel";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="Service"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "Testimonios",
+                    paragraph:
+                        "Descubre cómo hemos ayudado a emprendedores y marcas a transformar su presencia digital.Cada historia refleja nuestro compromiso con el diseño, funcionalidad y crecimiento de su tienda online.",
+                },
+            }}
+        />
+        <ServiceCards
+            description="SERVICES"
+            title="The Service We Provide For You"
+            client:visible
+            cards={[
+                {
+                    title: "Diseño UI/UX",
+                    description: "Creamos interfaces atractivas y funcionales.",
+                    image: {
+                        src: "/src/static/images/hero-slider-01.webp",
+                        alt: "Diseño UI/UX",
+                    },
+                },
+                {
+                    title: "Diseño UI/UX",
+                    description: "Creamos interfaces atractivas y funcionales.",
+                    image: {
+                        src: "/src/static/images/hero-slider-01.webp",
+                        alt: "Diseño UI/UX",
+                    },
+                },
+                {
+                    title: "Diseño UI/UX",
+                    description: "Creamos interfaces atractivas y funcionales.",
+                    image: {
+                        src: "/src/static/images/hero-slider-01.webp",
+                        alt: "Diseño UI/UX",
+                    },
+                },
+                {
+                    title: "Diseño UI/UX",
+                    description: "Creamos interfaces atractivas y funcionales.",
+                    image: {
+                        src: "/src/static/images/hero-slider-01.webp",
+                        alt: "Diseño UI/UX",
+                    },
+                },
+             
+            ]}
+        />
+
+    </main>
+    <Footer />
+</Layout>

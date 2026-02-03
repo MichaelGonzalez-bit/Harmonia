@@ -1,0 +1,85 @@
+---
+interface Product {
+    title: string;
+    image: string;
+    link: string;
+}
+
+const featured: Product[] = [
+    {
+        title: "Harmonia Initial Pack",
+        image: "/src/static/images/logo.png",
+        link: "/service",
+    },
+];
+---
+
+<aside class="featured-products">
+    <h2>Destacado del mes</h2>
+    <ul>
+        {featured.map((item) => (
+            <li>
+                <a href={item.link}>
+                    <img src={item.image} alt={item.title} />
+                    <span>{item.title}</span>
+                </a>
+            </li>
+        ))}
+    </ul>
+</aside>
+
+<style>
+    .featured-products {
+        position: fixed;
+        top: 10rem;
+        right: 1rem;
+        width: 220px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 12px;
+        z-index: 1000;
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+    }
+
+    .featured-products h2 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0.3rem;
+        color: #76e7ff;
+    }
+
+    .featured-products ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .featured-products li {
+        margin-bottom: 1rem;
+    }
+
+    .featured-products a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    .featured-products img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        margin-right: 0.5rem;
+        border-radius: 8px;
+        
+    }
+
+    @media (max-width: 768px) {
+        .featured-products {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,76 @@
+---
+import { HeroSlider1, HeroSlider3, HeroSlider2 , Back } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import FeaturedProducts from "../components/Featured/FeaturedProducts.astro";
+
+---
+
+<Layout
+    title="HARMONIA"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Vende en el futuro, sin complicaciones.",
+                    title: "HARMONIA",
+                    
+                    background: Back.src,
+                    
+                    
+                    paragraph:
+                        "En Harmonia Tech, simplificamos la tecnología para que tu negocio crezca sin límites. ",
+                    
+                    button: {
+                        text: "Iniciar Viaje",
+                        link: "/service",
+                    },
+                    
+                    
+                },
+                {
+                    subtitle: "Tu e-commerce, fácil, seguro y en armonía con el futuro",
+                    title: "HARMONIA",
+                    
+                    background: Back.src,
+                    
+                    
+                    paragraph:
+                        " Nuestra misión es brindarte soluciones digitales seguras, escalables y sin complicaciones, permitiéndote enfocarte en lo que realmente importa",
+                    
+                    button: {
+                        text: "Iniciar Viaje",
+                        link: "/service",
+                    },
+                    
+                    
+                },
+                {
+                    subtitle: "Construyendo el comercio del mañana, hoy",
+                    title: "HARMONIA",
+                    
+                    background: Back.src,
+                    
+                    
+                    paragraph:
+                        "Un panel de control fácil de usar, sin complicaciones técnicas.",
+                    
+                    button: {
+                        text: "Iniciar Viaje",
+                        link: "/service",
+                    },
+                    
+                    
+                },
+                
+            ]}
+            
+            
+        />
+                <FeaturedProducts/>
+    </main>
+</Layout>

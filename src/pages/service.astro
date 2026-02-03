@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
+import { ServiceCards } from "@modules/ServiceCards";
+import * as S from "./styled";
+import { Footer } from "@modules/Footer";
+
+---
+
+<Layout
+    title="Servicios"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "Initial Pack",
+                    paragraph:
+                        "Creamos eCommerce accesibles, potentes y con una experiencia visual que enamora a tus clientes.",
+                },
+                
+            }}
+        />
+        <ServiceCards
+            description="Imagina tener una tienda digital que trabaja por ti 24/7, diseñada a tu medida, lista para vender desde el día uno."
+            title="ESTE PAQUETE ESTA HECHO PARA TI"
+            client:visible
+            cards={[
+                {
+                    title: "Pasarelas de Pago Integradas",
+                    description:
+                        "Integración con múltiples medios de pago (Stripe, PayPal, transferencias, etc.).",
+                },
+                {
+                    title: "Panel de Administración Intuitivo",
+                    description:
+                        "Control total de productos, pedidos, clientes y reportes.",
+                },
+                {
+                    title: "Documentación Clara y Visual",
+                    description:
+                        "Manuales interactivos y visuales",
+                }
+            ]}
+        />
+
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "¿Qué vas a obtener?",
+                paragraph:
+                    "Una tienda profesional lista para crecer contigo.",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                switchPlaces: true,
+                image: {
+                    src: InfiniteImg2.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Estas preparado",
+                paragraph:
+                    "Integraciones con pagos, envíos y redes sociales para que vendas sin límites.",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Comencemos",
+                paragraph:
+                    "Manuales claros y visuales para que tú y tu equipo lo usen sin depender de nadie.",
+            }}
+        />
+        
+    </main>
+    <Footer />
+</Layout>

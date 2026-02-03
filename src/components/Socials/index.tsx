@@ -1,0 +1,62 @@
+import { type FC } from "react";
+import * as S from "./styled";
+import { Icon } from "@static/icons";
+
+export const Socials: FC = ({ ...rest }) => {
+    return (
+        <S.SocialsStyled {...rest}>
+            <S.SocialsList>
+                <S.SocialsListItem>
+                    <S.SocialsLink
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <p>Youtube</p>
+                        <Icon iconData="youtube" alt="github icon" />
+                    </S.SocialsLink>
+                </S.SocialsListItem>
+                <S.SocialsListItem>
+                    <S.SocialsLink
+                        href="https://linkedin.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <p>LinkedIn</p>
+                        <Icon iconData="linkedin" alt="linkedin icon" />
+                    </S.SocialsLink>
+                </S.SocialsListItem>
+                <S.SocialsListItem>
+                    <S.SocialsLink
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <p>Facebook</p>
+                        <Icon iconData="facebook" alt="facebook icon" />
+                    </S.SocialsLink>
+                </S.SocialsListItem>
+                <S.SocialsListItem>
+                    <S.SocialsLink
+                        href="https://www.tiktok.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <p>Tik tok</p>
+                        <Icon iconData="tiktok" alt="twitter icon" />
+                    </S.SocialsLink>
+                </S.SocialsListItem>
+                <S.SocialsListItem>
+                    <S.SocialsLink
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <p>Instagram</p>
+                        <Icon iconData="instagram" alt="instagram icon" />
+                    </S.SocialsLink>
+                </S.SocialsListItem>
+            </S.SocialsList>
+        </S.SocialsStyled>
+    );
+};

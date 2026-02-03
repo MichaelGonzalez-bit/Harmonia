@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider3, InfiniteImg1, InfiniteImg2 } from "@static/images";
+import { ServiceCards } from "@modules/ServiceCards";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="Novedades"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "Novedades",
+                    paragraph:
+                        "Bienvenido a nuestra central de noticias y actualizaciones.Aquí compartimos el pulso de nuestro proyecto: lo que construimos, lo que aprendemos y hacia dónde vamos.",
+                },
+            }}
+        />
+        
+
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Lets make you Infinite!",
+                paragraph:
+                    "Become a part of the Infinite community and start sharing your thoughts, ideas, and experiences with like-minded people.",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                image: {
+                    src: InfiniteImg1.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Lets make you Infinite!",
+                paragraph:
+                    "Become a part of the Infinite community and start sharing your thoughts, ideas, and experiences with like-minded people.",
+            }}
+        />
+        <Hero
+            heroType="textImage"
+            client:visible
+            data={{
+                switchPlaces: true,
+                image: {
+                    src: InfiniteImg2.src,
+                    width: 590,
+                    height: 300,
+                    alt: "Hero Image",
+                },
+                title: "Infinite Community",
+                paragraph:
+                    "with infinite dashboard you can easily manage your community, create posts, and interact with your followers.",
+            }}
+        />
+    </main>
+    <Footer />
+</Layout>
